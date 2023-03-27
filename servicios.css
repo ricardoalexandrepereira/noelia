@@ -1,0 +1,341 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*font-family: 'Merriweather', serif;
+font-family: 'The Nautigal', cursive;*/
+
+body {
+  font-family: "Merriweather", serif;
+ 
+}
+
+.portofolio {
+ 
+  color: #fff;
+  background: radial-gradient(rgba(43, 55, 96, 1), rgba(11, 16, 35, 1));
+ 
+}
+
+/* nav {
+  min-height: 10vh;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px ;
+ 
+} */
+.logo {
+  font-size: 25px;
+}
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 5% 1fr 1fr 1fr 5%;
+}
+
+.hero {
+  overflow: hidden;
+  height: 500px;
+  align-self: center;
+  justify-self: center;
+  display: flex;
+}
+
+.hero img {
+  height: 500px;
+  transition: transform 0.3s ease-out;
+  cursor: pointer;
+}
+.hero a{
+  display: flex;
+}
+
+.model-right {
+  transform: translate(0%, 10%);
+}
+.model-left {
+  transform: translate(0%, -10%);
+}
+
+.hero:hover .model-right {
+  transform: translate(0%, 0%);
+}
+.hero:hover .model-left {
+  transform: translate(0%, 0%);
+}
+
+.details {
+  grid-column: 2/3;
+  align-self: end;
+  margin-bottom: 40px;
+}
+
+.details h1 {
+  font-size: 70px;
+  font-family: "The Nautigal", cursive;
+  font-weight: 100;
+}
+
+.details h3 {
+  font-size: 20px;
+  font-family: "Merriweather", serif;
+  color: rgb(253, 132, 88);
+}
+.details p {
+  font-size: smaller;
+}
+
+.pages {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.barber,.photographer{
+position: absolute;
+bottom: 0%;
+left: 0%;
+width: 100%;
+opacity: 0;
+pointer-events: none;
+}
+
+.pages div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pages h3 {
+  font-size: 16px;
+  padding: 30px;
+}
+
+.pages svg {
+  cursor: pointer;
+  opacity: 0.5;
+  transform: scale(4);
+}
+
+.pages svg:hover {
+  animation: dot 0.5s ease-in-out infinite alternate;
+}
+
+.pages svg.active {
+  opacity: 1;
+}
+
+@keyframes dot {
+  0% {
+    transform: scale(4);
+  }
+  100% {
+    transform: scale(5);
+  }
+}
+
+.banner {
+  height: 50vh;
+  width: 100%;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 50vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right;
+}
+.author {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  width: 100%;
+  
+}
+
+.author h1 {
+  font-size: 100px;
+  font-weight: 100;
+  font-family: "The Nautigal", cursive;
+}
+.author h3 {
+  padding: 10px 0px;
+  font-size: 25px;
+  font-family: "Merriweather", serif;
+  letter-spacing: 20px;
+  line-height: 50px;
+  
+}
+
+.story,
+.my-work {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  padding: 80px 0px;
+  line-height: 50px;
+}
+
+.story img{
+  width: 300px;
+  height: 600px;
+}
+.story-description,.work-description{
+width:50%;
+
+}
+
+.story-description h3, .work-description h3{
+    font-size: 36px;
+    padding-bottom:30px;
+    font-family: "Merriweather", serif;
+}
+
+.story-description p, .work-description p{
+    padding: 20px 0px;
+    font-size: 17px;
+    font-family: "Merriweather", serif;
+}
+
+.work-gallery{
+    display: grid;
+    grid-template-columns: repeat(3,200px);
+}
+.work-gallery img{
+    width: 100%;
+}
+
+@media (max-width:1024px){
+   
+  
+    .page{
+        grid-template-columns: 5% 1fr 5%;
+        grid-template-rows: 2fr 1fr;
+        align-items:center;
+    }
+    .hero{
+        grid-column: 2/3;
+        height: auto;
+    }
+    .hero img{
+        height: 350px;
+    }
+    .details{
+        grid-row:2/3;
+        grid-column: 2/3;
+        text-align: center;
+    }
+    /*second page*/
+    .story,.my-work{
+        flex-direction: column;
+    }
+    .story-description,.work-description{
+        width: 100%;
+       
+
+    }
+    .work-gallery{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    }
+    .profile{
+        padding-top: 30px;
+        text-align: center;
+    }
+    .profile img{
+        width: 350px;
+        
+    }
+    .author h3{
+        font-size: 15px;
+    }
+}
+
+.nav-open{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 50vh;
+  background: #fff;
+  z-index: 1;
+  color:black;
+  display: grid;
+  grid-template-columns: 5% 1fr 1fr 5%;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  transform: translateY(-100%);
+
+}
+
+.contact{
+  grid-column: 2/3;
+}
+.nav-open h3{
+  font-size: 28px;
+
+}
+i{
+  padding: 0px 20px;
+  transform: scale(1.5);
+  margin-top: 5px;
+
+}
+
+.logo,.menu{
+  cursor: pointer;
+  z-index: 5;
+}
+
+.back{
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 30px;
+    z-index: 100;
+    font-family: "The Nautigal", cursive;
+    
+}
+
+
+.back a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+    
+}
+.back a i{
+  font-size: .8rem;
+}
+
