@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     const t1 = gsap.timeline();
     t1.from(".title .char", 1, {opacity:0, yPercent:30  , stagger:0.06, ease:"back.out"});
-    t1.to(".header__img",2 ,{clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", scale: 1, ease:"expo.out"},"-=1")
+   /*  t1.to(".header__img",2 ,{clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", scale: 1, ease:"expo.out"},"-=1") */
     t1.from(".header__marq",2 ,{opacity:0, yPercent:100, ease:"expo.out"},"-=1.5")
     t1.from(".nav",2 ,{opacity:0, yPercent:-100, ease:"expo.out"},"-=1.5")
     t1.from(".logo",1 ,{opacity:0, xPercent:-100, ease:"expo.out"},"-=1.6")
@@ -67,14 +67,14 @@ document.addEventListener("DOMContentLoaded", function(){
             xPercent:-70
         })
 
-        gsap.to('.header__img img',{
+        /* gsap.to('.header__img img',{
             scrollTrigger:{
                 trigger:".header",
                 start:"top top",
                 scrub:1.9
             },
             scale:1.3
-        })
+        }) */
 
 
         gsap.to('.header__marq-wrapp',{
