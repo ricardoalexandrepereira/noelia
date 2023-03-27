@@ -398,12 +398,14 @@ padding: 0 120px;
 }
 .contacto{
     width: 100%;
-    height: 100px;
+    height: 300px;
     position: absolute;
     bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    
 }
 .contacto p{
     font-size: 1rem;
@@ -411,6 +413,20 @@ padding: 0 120px;
     font-weight: 200;
     font-family: 'Alkatra', cursive, sans-serif;
 
+}
+.contacto a{
+    padding: 5px 20px;
+    color: white;
+    background-image: linear-gradient(to right, rgb(74, 133, 133),rgb(114, 47, 68));
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    text-decoration: none;
+    transition: all 1s ease;
+}
+.contacto a:hover{
+    color:rgb(114, 47, 68);
+    background-image: linear-gradient(to right, rgb(74, 133, 133),rgb(245, 239, 241));
 }
 
 @media screen and (max-width:698px) {
