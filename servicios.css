@@ -275,6 +275,15 @@ width:50%;
     }
 }
 
+@media (max-width:400px){
+.details h1{
+  font-size: 2.5rem;
+}
+.hero{
+  margin-top: 50px;
+}
+}
+
 .nav-open{
   position: absolute;
   top: 0px;
