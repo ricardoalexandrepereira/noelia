@@ -107,6 +107,11 @@ nav {
     height: 100%;
     object-fit: cover;
 }
+.landing img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .header__marq{
     position: absolute;
     bottom: 0;
@@ -438,6 +443,12 @@ padding: 0 120px;
 @media screen and (max-width:698px) {
     .header .title{
         font-size: 3rem;
+    }
+    .landing video{
+        display: none;
+    }
+    .landing img{
+        display: flex;
     }
 
     .about__wrapp{
